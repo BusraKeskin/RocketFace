@@ -217,26 +217,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &758966588 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8854619882081110099, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
-  m_PrefabInstance: {fileID: 1225387818}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &758966594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758966588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b62a97a36177c3b4b92aa7562c79ae39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 1
-  success: {fileID: 8300000, guid: 68611a5d9670ff1449d81e91f0a99ec8, type: 3}
-  crash: {fileID: 8300000, guid: ddb541baed407884bbb96183af5b474a, type: 3}
 --- !u!4 &917879766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3499528205044576866, guid: 6f3abc86cc3f93641a177bbb24befcb7, type: 3}
@@ -333,14 +313,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 758966593, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
-      propertyPath: m_audioClip
+    - target: {fileID: 758966594, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+      propertyPath: crashPrtcl
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 758966593, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1225387819}
+    - target: {fileID: 758966594, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+      propertyPath: successPrtcl
+      value: 
+      objectReference: {fileID: 1225387820}
     - target: {fileID: 811222215694539037, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -385,16 +365,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3829931632302194183, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
-      propertyPath: mainEngine
-      value: 
-      objectReference: {fileID: 8300000, guid: a27986a1ab57f934fa13e3e7ce66ffad, type: 3}
     - target: {fileID: 8854619882081110099, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
       propertyPath: m_Name
       value: AtomRocket
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8331628826851081357, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+--- !u!198 &1225387819 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1116915018652792589, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+  m_PrefabInstance: {fileID: 1225387818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1225387820 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6324323259987938213, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+  m_PrefabInstance: {fileID: 1225387818}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1953386763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5917054327814194970, guid: 4cf8f8d45e021ef47837fbd686405f5b, type: 3}

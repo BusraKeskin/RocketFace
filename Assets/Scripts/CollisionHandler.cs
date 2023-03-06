@@ -6,14 +6,21 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] float delayTime = 1f;
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip crash;
+    [SerializeField] ParticleSystem successPrtcl;
+    [SerializeField] ParticleSystem crashPrtcl;
+
+    
     AudioSource audioSource;
 
+    bool isTransitioning = false;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if (isTransitioning) { return; }
+
         switch (collision.gameObject.tag)
         {
             case "Start":
@@ -29,18 +36,23 @@ public class CollisionHandler : MonoBehaviour
     }
     void StartSuccesSequence()
     {
-        
-        GetComponent<Movement>().enabled = false;
+        isTransitioning = true;
+        audioSource.Stop();
+        successPrtcl.Play();
         audioSource.PlayOneShot(success);
+        GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", delayTime);
     }
     void StartCrashSequence()
     {
-        
+
         //TODO: Add SFX upon crash
         //TODO: Add particle effects
-        GetComponent<Movement>().enabled = false;
+        isTransitioning = true;
+        audioSource.Stop();
+        crashPrtcl.Play();
         audioSource.PlayOneShot(crash);
+        GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", delayTime);
     }
     void LoadNextLevel()
