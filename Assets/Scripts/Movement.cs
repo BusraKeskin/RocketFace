@@ -5,9 +5,13 @@ public class Movement : MonoBehaviour
     
     [SerializeField] float jumpSpeed = 300f;
     [SerializeField] float rotSpeed = 100f;
+    [SerializeField] AudioClip mainEngine;
+
     Rigidbody rb;
 
     AudioSource myAudio;
+
+    bool isAlive;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -30,7 +34,7 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * jumpSpeed * Time.deltaTime);
             if (!myAudio.isPlaying)
             {
-                myAudio.Play();
+                myAudio.PlayOneShot(mainEngine);
             }
             
         }
