@@ -1,60 +1,101 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
 {
     
     [SerializeField] float jumpSpeed = 300f;
     [SerializeField] float rotSpeed = 100f;
+   
     [SerializeField] AudioClip mainEngine;
+    [SerializeField] ParticleSystem mainPrtclEngine;
+    [SerializeField] ParticleSystem rightPrtcl;
+    [SerializeField] ParticleSystem leftPrtcl;
 
     Rigidbody rb;
 
     AudioSource myAudio;
 
-    bool isAlive;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         myAudio = GetComponent<AudioSource>();
     }
 
-    
     void Update()
     {
-        ProcessInput();
-        ProcessRotation();
-
-        
+        ProcessThrust();
+        ProcessRotation();    
     }
 
-    void ProcessInput()
+    void ProcessThrust()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up * jumpSpeed * Time.deltaTime);
-            if (!myAudio.isPlaying)
-            {
-                myAudio.PlayOneShot(mainEngine);
-            }
-            
+            StartThrust();
         }
         else
         {
-
-            myAudio.Stop();
+            StopThrust();
 
         }
     }
+
     void ProcessRotation()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(rotSpeed);
+            RotateLeft();
+
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
-            ApplyRotation(-rotSpeed);
+            RotateRight();
         }
+        else
+        {
+            StopRotating();
+        }
+    }
+
+
+    private void StopThrust()
+    {
+        mainPrtclEngine.Stop();
+        myAudio.Stop();
+    }
+
+    private void StartThrust()
+    {
+        rb.AddRelativeForce(Vector3.up * jumpSpeed * Time.deltaTime);
+        if (!myAudio.isPlaying)
+        {
+            mainPrtclEngine.Play();
+            myAudio.PlayOneShot(mainEngine);
+        }
+    }
+
+    private void RotateLeft()
+    {
+        ApplyRotation(rotSpeed);
+        if (!rightPrtcl.isPlaying)
+        {
+            rightPrtcl.Play();
+        }
+    }
+    private void RotateRight()
+    {
+        ApplyRotation(-rotSpeed);
+        if (!leftPrtcl.isPlaying)
+        {
+            leftPrtcl.Play();
+        }
+    }
+    private void StopRotating()
+    {
+        rightPrtcl.Stop();
+
+        leftPrtcl.Stop();
     }
 
     void ApplyRotation(float rotThisFrame)

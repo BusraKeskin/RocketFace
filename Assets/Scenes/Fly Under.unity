@@ -365,6 +365,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3829931632302194183, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+      propertyPath: jumpSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829931632302194183, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+      propertyPath: leftPrtcl
+      value: 
+      objectReference: {fileID: 1225387823}
+    - target: {fileID: 3829931632302194183, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+      propertyPath: sidePrtcl
+      value: 
+      objectReference: {fileID: 1225387821}
+    - target: {fileID: 3829931632302194183, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+      propertyPath: rightPrtcl
+      value: 
+      objectReference: {fileID: 1225387821}
+    - target: {fileID: 3829931632302194183, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+      propertyPath: thrustPrtcl
+      value: 
+      objectReference: {fileID: 1225387822}
+    - target: {fileID: 3829931632302194183, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+      propertyPath: mainPrtclEngine
+      value: 
+      objectReference: {fileID: 1225387822}
     - target: {fileID: 8854619882081110099, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
       propertyPath: m_Name
       value: AtomRocket
@@ -380,6 +404,21 @@ ParticleSystem:
 --- !u!198 &1225387820 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 6324323259987938213, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+  m_PrefabInstance: {fileID: 1225387818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1225387821 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2702925647602656295, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+  m_PrefabInstance: {fileID: 1225387818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1225387822 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4507189460300436812, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+  m_PrefabInstance: {fileID: 1225387818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1225387823 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3309092184397827210, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
   m_PrefabInstance: {fileID: 1225387818}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1953386763 stripped
