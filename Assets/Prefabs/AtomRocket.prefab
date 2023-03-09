@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 758966593}
   - component: {fileID: 758966594}
   - component: {fileID: 8331628826851081357}
+  - component: {fileID: 5869270124189637335}
   m_Layer: 0
   m_Name: AtomRocket
   m_TagString: Untagged
@@ -916,6 +917,20 @@ MonoBehaviour:
   crash: {fileID: 8300000, guid: ddb541baed407884bbb96183af5b474a, type: 3}
   successPrtcl: {fileID: 0}
   crashPrtcl: {fileID: 0}
+--- !u!114 &5869270124189637335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854619882081110099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e8d40bd4047a2429804da55b7cc436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveVector: {x: 0, y: 4, z: 0}
+  period: 2
 --- !u!1 &8972606480291121315
 GameObject:
   m_ObjectHideFlags: 0

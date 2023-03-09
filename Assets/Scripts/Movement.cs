@@ -32,6 +32,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            GetComponent<Oscillator>().enabled = false;
             StartThrust();
         }
         else
@@ -45,11 +46,13 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
+            GetComponent<Oscillator>().enabled = false;
             RotateLeft();
 
         }
         else if (Input.GetKey(KeyCode.D))
         {
+            GetComponent<Oscillator>().enabled = false;
             RotateRight();
         }
         else
