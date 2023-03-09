@@ -17,15 +17,25 @@ public class Oscillator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float cycles = Time.time / period;  // continually growing over time
+        if(period <= Mathf.Epsilon)
+        {
+            Debug.Log("The value of period cannot be Zero or any number less than 0! How can you divide it!?");
+            return;
+        }
+        {
+            float cycles = Time.time / period;  // continually growing over time
 
-        const float tau = Mathf.PI * 2;  // constant value of 6.283
-        float rawSinWave = Mathf.Sin(cycles * tau);  // going from -1 to 1
+            const float tau = Mathf.PI * 2;  // constant value of 6.283
+            float rawSinWave = Mathf.Sin(cycles * tau);  // going from -1 to 1
 
-        moveFactor = (rawSinWave + 1f) / 2f;   // recalculated to go from 0 to 1 so its cleaner
+            moveFactor = (rawSinWave + 1f) / 2f;   // recalculated to go from 0 to 1 so its cleaner
 
 
-        Vector3 offset = moveVector * moveFactor;
-        transform.position = startingPos + offset;
+            Vector3 offset = moveVector * moveFactor;
+            transform.position = startingPos + offset;
+        }
+        
+        
+        
     }
 }
