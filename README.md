@@ -7,7 +7,7 @@ Source code is provided for educational purposes.
 
 https://user-images.githubusercontent.com/18630252/224360564-3af98ba9-db6a-4c20-a10b-e784245b0783.mp4
 
-## Some Used Math Methods
+## Some Used Math Methods For Oscillation Move:
 ![alt text](https://upload.wikimedia.org/wikipedia/commons/3/3b/Circle_cos_sin.gif)
 ## Assets
 For Rocket Model : (https://assetstore.unity.com/packages/3d/vehicles/space/atom-rocket-model-140021)
