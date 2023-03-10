@@ -3,7 +3,11 @@ It's a 3-level mini game project that I developed with Unity3D to learn level lo
 It was made by following Rick Davidson's lecture: [Complete C# Unity Game Developer 3D series](https://www.udemy.com/course/unitycourse2/) on Udemy and added changes.
 Source code is provided for educational purposes.
 
-[x](https://clipchamp.com/watch/Zjt0qgDX7yM)
+
+
+https://user-images.githubusercontent.com/18630252/224360564-3af98ba9-db6a-4c20-a10b-e784245b0783.mp4
+
+
 
 ## Assets
 For Rocket Model : (https://assetstore.unity.com/packages/3d/vehicles/space/atom-rocket-model-140021)
